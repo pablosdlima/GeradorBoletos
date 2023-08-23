@@ -1,0 +1,101 @@
+# Compiled Object files
+*.suo
+*.obj
+*.dll
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.sdf
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+*.DotSettings.user
+[Tt]humbs.db
+[Tt]est[Rr]esult*
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+_ReSharper*/
+[Ii]pch/
+[Bb]uild/
+[Ll]ogs/
+[Aa]rtifacts/
+[Nn]uGetPackages/
+*.sqlite
+
+# Visual Studio files
+.vscode/
+*.sln
+*.suo
+*.vcxproj
+*.vcxproj.filters
+*.user
+*.ncb
+*.sdf
+*.opensdf
+*.cachefile
+*.VC.db
+*.sln.docstates
+*.dbmdl
+*.log
+*.tlog/
+*.config
+*.vspscc
+*.vspx
+*.vsp
+*.psess
+*.vssscc
+*.vssettings
+*.vstemplate
+*.vsct
+
+# Rider files
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.userprefs
+*.suo
+*.user
+
+# NuGet
+packages/
+*.nupkg
+*.pfx
+*.snk
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# ASP.NET Personalization
+Personalization.db
+
+# Entity Framework
+ModelHash.xml
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Tye
+.tye/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

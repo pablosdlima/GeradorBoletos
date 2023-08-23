@@ -1,0 +1,43 @@
+**Tabelas:**
+
+1. **Tabela "Emissores":**
+   - ID (Chave Primária)
+   - Nome/Razão Social
+   - CNPJ/CPF
+   - Endereço
+   - Telefone
+   - Email
+
+2. **Tabela "Beneficiários":**
+   - ID (Chave Primária)
+   - Nome
+   - CNPJ/CPF
+   - Endereço
+   - Telefone
+   - Email
+
+3. **Tabela "Boletos":**
+   - ID (Chave Primária)
+   - Valor
+   - Data de Vencimento
+   - Instruções de Pagamento
+   - Descrição do Pagamento
+   - Emissor ID (Chave Estrangeira referenciando a tabela "Emissores")
+   - Beneficiário ID (Chave Estrangeira referenciando a tabela "Beneficiários")
+
+4. **Tabela "Pagamentos":**
+   - ID (Chave Primária)
+   - Data do Pagamento
+   - Valor Pago
+   - Boleto ID (Chave Estrangeira referenciando a tabela "Boletos")
+
+**Explicação:**
+
+- A tabela "Emissores" armazena informações sobre as empresas ou pessoas que estão criando os boletos.
+- A tabela "Beneficiários" armazena informações sobre os beneficiários que receberão os pagamentos.
+- A tabela "Boletos" contém informações específicas de cada boleto, incluindo seu valor, data de vencimento, instruções de pagamento, descrição e referências para o emissor e beneficiário.
+- A tabela "Pagamentos" armazena informações sobre os pagamentos efetuados, incluindo a data do pagamento, valor pago e a referência ao boleto correspondente.
+
+Além das informações acima, você também pode incluir campos adicionais, como um campo de status para o boleto (pago, vencido, em aberto), ou outros detalhes que sejam relevantes para o seu sistema.
+
+Lembrando que essa é apenas uma sugestão de estrutura de dados. A implementação final dependerá das suas necessidades específicas e das regras do negócio. Certifique-se de projetar as chaves primárias, chaves estrangeiras e índices adequados para garantir um bom desempenho e integridade dos dados.
