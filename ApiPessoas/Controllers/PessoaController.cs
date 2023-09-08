@@ -4,6 +4,7 @@ using ApiPessoas.Services.Bussines.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Transactions;
 
 namespace ApiPessoas.Controllers
@@ -19,6 +20,22 @@ namespace ApiPessoas.Controllers
             _pessoaServices = pessoaServices;
             _mapper = mapper;
         }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<PessoaVo>>> Todos()
+        {
+            try
+            {
+                var products = await _pessoaServices.Get().ToListAsync();
+                return Ok(products);
+            }
+            catch (Exception err)
+            {
+                return BadRequest(err.Message);
+            }
+
+        }
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult<PessoaVo>> PorId(int id)
@@ -54,6 +71,28 @@ namespace ApiPessoas.Controllers
                     return Ok(_mapper.Map<PessoaVo>(ultimo));
                 }
                 return BadRequest();
+            }
+            catch (Exception err)
+            {
+                scope.Dispose();
+                return BadRequest(err.Message);
+            }
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<PessoaVo>> Update([FromBody] PessoaVo vo)
+        {
+            using var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled);
+            try
+            {
+                if (vo == null)
+                    return BadRequest();
+
+                var pedido = await _pessoaServices.UpdateAsync(_mapper.Map<Pessoa>(vo));
+                if (pedido == false) return BadRequest();
+
+                scope.Complete();
+                return Ok(vo);
             }
             catch (Exception err)
             {
