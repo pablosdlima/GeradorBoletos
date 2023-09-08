@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\pablo\\.nuget\\packages\\": {}
+    "C:\\Users\\lpablo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Aplicações\\GeradorBoletos\\GeradorBoletos\\GeradorBoletos.csproj",
+      "projectUniqueName": "C:\\Users\\lpablo\\Desktop\\App\\GeradorBoletos\\GeradorBoletos\\GeradorBoletos.csproj",
       "projectName": "GeradorBoletos",
-      "projectPath": "D:\\Aplicações\\GeradorBoletos\\GeradorBoletos\\GeradorBoletos.csproj",
-      "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-      "outputPath": "D:\\Aplicações\\GeradorBoletos\\GeradorBoletos\\obj\\",
+      "projectPath": "C:\\Users\\lpablo\\Desktop\\App\\GeradorBoletos\\GeradorBoletos\\GeradorBoletos.csproj",
+      "packagesPath": "C:\\Users\\lpablo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lpablo\\Desktop\\App\\GeradorBoletos\\GeradorBoletos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lpablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

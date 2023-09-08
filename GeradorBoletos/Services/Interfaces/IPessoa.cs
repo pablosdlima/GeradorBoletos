@@ -4,10 +4,10 @@ namespace GeradorBoletos.Services.Interfaces
 {
     public interface IPessoa
     {
-        Task<IEnumerable<PessoaMd>> FindAllProducts();
-        Task<PessoaMd> FindProductById(long id);
-        Task<PessoaMd> CreateProduct(PessoaMd model);
-        Task<PessoaMd> UpdateProduct(PessoaMd model);
-        Task<bool> DeleteProductById(long id);
+        Task<IEnumerable<PessoaMd>> FindAll();
+        Task<PessoaMd> FindById(long id);
+        Task<PessoaMd> Create(PessoaMd model);
+        Task<PessoaMd> Update(PessoaMd model);
+        Task<bool> DeleteById(long id);
     }
 }

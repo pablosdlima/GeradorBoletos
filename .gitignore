@@ -1,101 +1,38 @@
-# Compiled Object files
-*.suo
-*.obj
-*.dll
-*.exe
-*.pdb
-*.user
-*.aps
-*.pch
-*.vspscc
-*_i.c
-*_p.c
-*.ncb
-*.sdf
-*.tlb
-*.tlh
-*.bak
-*.[Cc]ache
-*.ilk
-*.log
-*.lib
-*.sbr
-*.scc
-*.DotSettings.user
-[Tt]humbs.db
-[Tt]est[Rr]esult*
-[Bb]in
-[Dd]ebug*/
-[Rr]elease*/
-_ReSharper*/
-[Ii]pch/
-[Bb]uild/
-[Ll]ogs/
-[Aa]rtifacts/
-[Nn]uGetPackages/
-*.sqlite
-
-# Visual Studio files
+# Arquivos temporários gerados pelo Visual Studio
 .vscode/
-*.sln
-*.suo
-*.vcxproj
-*.vcxproj.filters
-*.user
-*.ncb
-*.sdf
-*.opensdf
-*.cachefile
-*.VC.db
-*.sln.docstates
-*.dbmdl
-*.log
-*.tlog/
-*.config
-*.vspscc
-*.vspx
-*.vsp
-*.psess
-*.vssscc
-*.vssettings
-*.vstemplate
-*.vsct
+.vs/
 
-# Rider files
-.idea/
-*.sln.iml
+# Arquivos binários e de compilação
+bin/
+obj/
 
-# User-specific files
-*.rsuser
-*.userprefs
-*.suo
-*.user
-
-# NuGet
+# Pacotes NuGet
+*.nuget.props
+*.nuget.targets
 packages/
-*.nupkg
-*.pfx
-*.snk
 
-# ASP.NET Scaffolding
-ScaffoldingReadMe.txt
-
-# ASP.NET Personalization
-Personalization.db
-
-# Entity Framework
-ModelHash.xml
-
-# .NET Core
-project.lock.json
-project.fragment.lock.json
-artifacts/
-
-# Tye
-.tye/
-
-# User-specific files
-*.suo
+# Arquivos de saída de compilação
 *.user
-*.userosscache
-*.sln.docstates
+*.suo
+*.cache
+*.log
+*.vspscc
+
+# Dependências do Rider
+.idea/
+
+# Arquivos de configuração de projeto
+*.sln.iml
+*.suo
+*.userprefs
+
+# Ferramentas de construção
+_ReSharper/
+[Tt]est[Rr]esult*/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Cache de análise de código
+.roslyn/
