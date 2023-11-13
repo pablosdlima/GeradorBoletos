@@ -1,13 +1,13 @@
-﻿using GeradorBoletos.Models;
-using GeradorBoletos.Services.Interfaces;
-using GeradorBoletos.Services.Utils;
+﻿using WebGeradorBoletos.Models;
+using WebGeradorBoletos.Services.Interfaces;
+using WebGeradorBoletos.Services.Utils;
 
-namespace GeradorBoletos.Services
+namespace WebGeradorBoletos.Services
 {
     public class PessoaServices : IPessoa
     {
         private readonly HttpClient _client;
-        private const string _url = "api/Pessoa";
+        private const string _url = "/api/Pessoa";
 
         public PessoaServices(HttpClient client)
         {
@@ -22,8 +22,15 @@ namespace GeradorBoletos.Services
 
         public async Task<PessoaMd> FindById(long id)
         {
-            var response = await _client.GetAsync($"{_url}/{id}");
-            return await response.ReadContentAs<PessoaMd>();
+            try
+            {
+                var response = await _client.GetAsync($"{_url}/{id}");
+                return await response.ReadContentAs<PessoaMd>();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public async Task<PessoaMd> Create(PessoaMd model)

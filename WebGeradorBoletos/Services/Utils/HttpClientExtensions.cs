@@ -1,7 +1,7 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
 
-namespace GeradorBoletos.Services.Utils
+namespace WebGeradorBoletos.Services.Utils
 {
     public static class HttpClientExtensions //extension para facilitar as requests...
     {

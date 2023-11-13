@@ -38,7 +38,7 @@ namespace ApiPessoas.Services.Repository
         }
 
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(long id)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace ApiPessoas.Services.Repository
             }
         }
 
-        public async Task<int> LastIdAsync(Expression<Func<T, int>> predicate)
+        public async Task<long> LastIdAsync(Expression<Func<T, long>> predicate)
         {
             return await _context.Set<T>().MaxAsync(predicate);
         }

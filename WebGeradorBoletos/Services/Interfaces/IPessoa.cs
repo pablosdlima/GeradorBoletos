@@ -1,6 +1,6 @@
-﻿using GeradorBoletos.Models;
+﻿using WebGeradorBoletos.Models;
 
-namespace GeradorBoletos.Services.Interfaces
+namespace WebGeradorBoletos.Services.Interfaces
 {
     public interface IPessoa
     {

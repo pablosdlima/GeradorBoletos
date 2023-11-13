@@ -38,7 +38,7 @@ namespace ApiPessoas.Controllers
 
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<PessoaVo>> PorId(int id)
+        public async Task<ActionResult<PessoaVo>> PorId(long id)
         {
             try
             {
@@ -100,6 +100,5 @@ namespace ApiPessoas.Controllers
                 return BadRequest(err.Message);
             }
         }
-
     }
 }

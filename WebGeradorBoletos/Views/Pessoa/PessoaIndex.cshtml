@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebGeradorBoletos.Models.PessoaMd>
+
+<div class="border-bottom p-2 m-1">
+    <div class="d-flex justify-content-center">
+        <h1 class="h1 font-weight-bold text-info">Gerenciar Pessoas...</h1>
+    </div>
+    <div class="d-flex justify-content-end">
+        <a asp-action="Create" asp-controller="Pessoa" class="btn btn-primary p-2">Add Pessoa</a>
+    </div>
+</div>
+<table class="table table-striped border p-3 m-3">
+    <thead class="bg-info text-white font-weight-bold">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoPessoa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Documento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Endereco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th class="text-center" colspan="4">
+                Gerenciar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    Pessoa @(item.TipoPessoa == 0 ? "Fisica" : "Jurídica")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Documento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Endereco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                <td>
+                    <a asp-action="PessoaDetais" class="btn btn-dark" asp-route-id="@item.Id">
+                        Emissões
+                    </a>
+                    <a asp-action="Update" class="btn btn-success" asp-route-id="@item.Id">
+                        alterações
+                    </a>
+                    <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">
+                        deletar
+                    </a>
+                </td>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

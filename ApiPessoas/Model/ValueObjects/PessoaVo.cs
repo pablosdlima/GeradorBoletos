@@ -4,7 +4,7 @@ namespace ApiPessoas.Model.ValueObjects
 {
     public class PessoaVo
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Nome { get; set; }
         public TipoPessoa TipoPessoa { get; set; }
         public TipoFuncao TipoFuncao { get; set; }
